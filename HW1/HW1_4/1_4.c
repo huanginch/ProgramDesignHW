@@ -18,6 +18,10 @@ int main(void){
 	
 	//read the sentence
 	while( (chara = getchar()) != '\n' ){
+
+		if(chara == '\r'){
+			break;
+		}
 		
 		if(chara != ' '){ 
 			sentence[i][j] = chara;
@@ -34,7 +38,7 @@ int main(void){
 	
 
 	scanf("%s", inputWord);
-	printf("%s\n", inputWord);
+	//printf("%s\n", inputWord);
 	
 	int SpecNum = 0; //the number of specific word
 	SpecNum = wordcmp(sentence, inputWord);
